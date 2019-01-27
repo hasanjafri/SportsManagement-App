@@ -9,7 +9,7 @@ import Secure from "./components/Secure.vue";
 
 Vue.use(Router);
 
-export default new Router({
+let router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
@@ -43,3 +43,17 @@ export default new Router({
     }
   ]
 });
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (store.getters.isLoggedIn) {
+      next();
+      return;
+    }
+    next("/login");
+  } else {
+    next();
+  }
+});
+
+export default router;
