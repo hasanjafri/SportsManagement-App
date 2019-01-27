@@ -1,20 +1,18 @@
 <template>
   <v-app id="app">
     <v-navigation-drawer v-if="windowWidth <= 960" v-model="drawer" fixed app>
-      <v-list>
-        <v-list-tile
-          @click=""
-          v-for="(item, index) in dropDownItems"
-          :key="index"
-        >
-          <v-list-tile-action>
-            <v-icon>{{ item.iconName }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
+      <v-expansion-panel>
+        <v-expansion-panel-content v-for="(item, i) in dropDownItems" :key="i">
+          <div slot="header">{{ item.title }}</div>
+          <v-list>
+            <v-list-tile @click="" v-for="(itemList, i) in item.items" :key="i">
+              <v-list-tile-content>
+                <v-list-tile-title>{{ itemList }}</v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </v-list>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
     </v-navigation-drawer>
     <v-toolbar app>
       <v-toolbar-side-icon
@@ -102,7 +100,7 @@ export default {
         },
         {
           title: "Hockey",
-          items: ["Men's", "Women's", "Kid's", ""],
+          items: ["Men's", "Women's", "Kid's"],
           iconName: "fa-hockey-puck"
         },
         { title: "Yoga", items: ["Men's", "Women's"], iconName: "fa-heart" }
