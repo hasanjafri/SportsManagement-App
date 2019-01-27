@@ -1,12 +1,58 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-      <span v-if="isLoggedIn"> | <a @click="logout">Logout</a></span>
-    </div>
-    <router-view />
-  </div>
+  <v-app id="app">
+    <v-navigation-drawer v-if="windowWidth <= 960" v-model="drawer" fixed app>
+      <v-list>
+        <v-list-tile
+          @click=""
+          v-for="(item, index) in dropDownItems"
+          :key="index"
+        >
+          <v-list-tile-action>
+            <v-icon>{{ item.iconName }}</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app>
+      <v-toolbar-side-icon
+        class="hidden-md-and-up"
+        @click.stop="drawer = !drawer"
+      ></v-toolbar-side-icon>
+      <v-toolbar-title class="headline text-uppercase">
+        <span>MIC </span>
+        <span class="font-weight-light">Sports Facilities</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-menu v-for="(item, index) in dropDownItems" :key="index" offset-y>
+          <v-btn flat slot="activator">
+            <v-icon class="pr-2">{{ item.iconName }}</v-icon>
+            {{ item.title }}
+          </v-btn>
+          <v-list>
+            <v-list-tile
+              v-for="(itemList, index) in item.items"
+              :key="index"
+              @click=""
+            >
+              <v-list-tile-title>{{ itemList }}</v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </v-menu>
+        <v-btn flat to="/about">
+          <v-icon class="pr-2">fa-sign-in-alt</v-icon>
+          Admin
+        </v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+
+    <v-content>
+      <router-view />
+    </v-content>
+  </v-app>
 </template>
 
 <style>
@@ -17,45 +63,65 @@
   text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
 
 <script>
-  export default {
-    computed: {
-      isLoggedIn : function(){ return this.$store.getters.isLoggedIn}
-    },
-    created: function () {
-      this.$http.interceptors.response.use(undefined, function (err) {
-        return new Promise(function (resolve, reject) {
-          if (err.status === 401 && err.config && !err.config.__isRetryRequest) {
-            this.$store.dispatch(logout);
-          }
-          throw err;
-        });
+export default {
+  computed: {
+    isLoggedIn: function() {
+      return this.$store.getters.isLoggedIn;
+    }
+  },
+  created: function() {
+    this.$http.interceptors.response.use(undefined, function(err) {
+      return new Promise(function(resolve, reject) {
+        if (err.status === 401 && err.config && !err.config.__isRetryRequest) {
+          this.$store.dispatch(logout);
+        }
+        throw err;
       });
-    },
-    data() {
-      
-    },
-    methods: {
-      logout: function () {
-        this.$store.dispatch('logout')
-        .then(() => {
-          this.$router.push('/login')
-        })
-      }
-    },
+    });
+  },
+  data() {
+    return {
+      dropDownItems: [
+        {
+          title: "Badminton",
+          items: ["Men's", "Women's", "Kid's"],
+          iconName: "fa-table-tennis"
+        },
+        {
+          title: "Basketball",
+          items: ["Men's", "Women's", "Kid's"],
+          iconName: "fa-basketball-ball"
+        },
+        {
+          title: "VolleyBall",
+          items: ["Men's", "Women's", "Kid's"],
+          iconName: "fa-volleyball-ball"
+        },
+        {
+          title: "Hockey",
+          items: ["Men's", "Women's", "Kid's", ""],
+          iconName: "fa-hockey-puck"
+        },
+        { title: "Yoga", items: ["Men's", "Women's"], iconName: "fa-heart" }
+      ],
+      drawer: null,
+      windowWidth: window.innerWidth
+    };
+  },
+  mounted() {
+    window.onresize = () => {
+      this.windowWidth = window.innerWidth;
+    };
+  },
+  methods: {
+    logout: function() {
+      this.$store.dispatch("logout").then(() => {
+        this.$router.push("/login");
+      });
+    }
   }
+};
 </script>
