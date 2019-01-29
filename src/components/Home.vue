@@ -5,8 +5,8 @@
     </section>
 
     <section>
-      <v-layout column wrap class="my-5" align-center>
-        <v-flex xs12 sm4 class="my-3">
+      <v-layout class="my-1" column wrap align-center>
+        <v-flex xs12 sm4 class="my-1">
           <div class="text-xs-center">
             <h2 class="headline">
               Welcome to MIC Sports Facilities based in Brampton, ON, Canada.
@@ -22,9 +22,9 @@
           <v-container grid-list-xl>
             <v-layout row wrap align-center>
               <v-flex xs12 md4>
-                <v-card class="elevation-0 transparent">
+                <v-card elevation="0" id="card">
                   <v-card-text class="text-xs-center">
-                    <v-icon x-large class="blue--text text--lighten-2"
+                    <v-icon x-large class="light-green--text text--lighten-2"
                       >fa-user</v-icon
                     >
                   </v-card-text>
@@ -43,9 +43,9 @@
                 </v-card>
               </v-flex>
               <v-flex xs12 md4>
-                <v-card class="elevation-0 transparent">
+                <v-card elevation="0" id="card">
                   <v-card-text class="text-xs-center">
-                    <v-icon x-large class="blue--text text--lighten-2"
+                    <v-icon x-large class="light-green--text text--lighten-2"
                       >fa-clock</v-icon
                     >
                   </v-card-text>
@@ -62,9 +62,9 @@
                 </v-card>
               </v-flex>
               <v-flex xs12 md4>
-                <v-card class="elevation-0 transparent">
+                <v-card elevation="0" id="card">
                   <v-card-text class="text-xs-center">
-                    <v-icon x-large class="blue--text text--lighten-2"
+                    <v-icon x-large class="light-green--text text--lighten-2"
                       >fa-tasks</v-icon
                     >
                   </v-card-text>
@@ -87,8 +87,28 @@
         </v-flex>
       </v-layout>
     </section>
+
+    <section>
+      <v-parallax :src="require('../assets/indoor-ball.jpeg')" height="380">
+        <v-layout column align-center justify-center>
+          <div class="headline white--text mb-3 text-xs-center">
+            Staying healthy has never been easier
+          </div>
+          <em>Enroll in an event today!</em>
+          <v-btn class="light-green darken-1 mt-5" dark large to="/login">
+            Get Started
+          </v-btn>
+        </v-layout>
+      </v-parallax>
+    </section>
   </v-content>
 </template>
+
+<style>
+#card {
+  background-color: transparent !important;
+}
+</style>
 
 <script>
 export default {
