@@ -90,7 +90,7 @@
 
     <section>
       <v-parallax :src="require('../assets/indoor-ball.jpeg')" height="380">
-        <v-layout column align-center justify-center>
+        <!-- <v-layout column align-center justify-center>
           <div class="headline white--text mb-3 text-xs-center">
             Staying healthy has never been easier
           </div>
@@ -98,11 +98,11 @@
           <v-btn flat class="light-green darken-1 mt-5" dark large to="/login">
             Get Started
           </v-btn>
-        </v-layout>
+        </v-layout> -->
       </v-parallax>
     </section>
 
-    <section>
+    <!-- <section>
       <v-container grid-list-xl>
         <v-layout row wrap justify-center class="my-1">
           <v-flex xs12 sm4>
@@ -164,7 +164,7 @@
           </v-flex>
         </v-layout>
       </v-container>
-    </section>
+    </section> -->
 
     <v-footer class="light-green darken-1">
       <v-layout row wrap align-center>
