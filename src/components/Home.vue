@@ -89,7 +89,7 @@
     </section>
 
     <section>
-      <v-parallax :src="require('../assets/indoor-ball.jpeg')" height="380">
+      <v-parallax :src="require('../assets/sports.jpg')" height="380">
         <!-- <v-layout column align-center justify-center>
           <div class="headline white--text mb-3 text-xs-center">
             Staying healthy has never been easier
