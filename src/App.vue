@@ -1,5 +1,5 @@
 <template>
-  <v-app id="app">
+  <v-app id="app" light>
     <v-navigation-drawer v-if="windowWidth <= 960" v-model="drawer" fixed app>
       <v-expansion-panel>
         <v-expansion-panel-content v-for="(item, i) in dropDownItems" :key="i">
@@ -14,7 +14,7 @@
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-navigation-drawer>
-    <v-toolbar app>
+    <v-toolbar dark app color="light-green darken-1">
       <v-toolbar-side-icon
         class="hidden-md-and-up"
         @click.stop="drawer = !drawer"
