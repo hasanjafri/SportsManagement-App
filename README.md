@@ -1,4 +1,4 @@
-# sportsmanagement-ui
+# SportsManagement-App
 
 ## Project setup
 ```
@@ -8,6 +8,11 @@ yarn install
 ### Compiles and hot-reloads for development
 ```
 yarn run serve
+```
+
+### Run development server
+```
+yarn run server
 ```
 
 ### Compiles and minifies for production
