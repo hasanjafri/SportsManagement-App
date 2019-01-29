@@ -95,7 +95,7 @@
             Staying healthy has never been easier
           </div>
           <em>Enroll in an event today!</em>
-          <v-btn class="light-green darken-1 mt-5" dark large to="/login">
+          <v-btn flat class="light-green darken-1 mt-5" dark large to="/login">
             Get Started
           </v-btn>
         </v-layout>
