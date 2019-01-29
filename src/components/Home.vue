@@ -101,6 +101,80 @@
         </v-layout>
       </v-parallax>
     </section>
+
+    <section>
+      <v-container grid-list-xl>
+        <v-layout row wrap justify-center class="my-1">
+          <v-flex xs12 sm4>
+            <v-card elevation="0" id="card">
+              <v-card-title primary-title class="layout justify-center">
+                <div class="headline">Who We Are</div>
+              </v-card-title>
+              <v-card-text>
+                Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat
+                tincidunt ornare. Pellentesque habitant morbi tristique senectus
+                et netus et malesuada fames ac turpis egestas. Nullam in aliquet
+                odio. Aliquam eu est vitae tellus bibendum tincidunt.
+                Suspendisse potenti.
+              </v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex xs12 sm4 offset-sm1>
+            <v-card elevation="0" id="card">
+              <v-card-title primary-title class="layout justify-center">
+                <div class="headline">Contact us</div>
+              </v-card-title>
+              <v-card-text>
+                Contact us if you have any questions or require more information
+                about an event
+              </v-card-text>
+              <v-list class="transparent">
+                <v-list-tile>
+                  <v-list-tile-action>
+                    <v-icon class="light-green--text text--darken-1"
+                      >fa-phone</v-icon
+                    >
+                  </v-list-tile-action>
+                  <v-list-tile-content>
+                    <v-list-tile-title>(905) 459-0891</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile>
+                  <v-list-tile-action>
+                    <v-icon class="light-green--text text--darken-1"
+                      >fa-home</v-icon
+                    >
+                  </v-list-tile-action>
+                  <v-list-tile-content>
+                    <v-list-tile-title>Brampton, ON, Canada</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile>
+                  <v-list-tile-action>
+                    <v-icon class="light-green--text text--darken-1"
+                      >fa-envelope</v-icon
+                    >
+                  </v-list-tile-action>
+                  <v-list-tile-content>
+                    <v-list-tile-title>email@domain.com</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </v-list>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </section>
+
+    <v-footer class="light-green darken-1">
+      <v-layout row wrap align-center>
+        <v-flex xs12>
+          <div class="white--text ml-3">
+            Managed by the Masumeen Islamic Center © 2019
+          </div>
+        </v-flex>
+      </v-layout>
+    </v-footer>
   </v-content>
 </template>
 
