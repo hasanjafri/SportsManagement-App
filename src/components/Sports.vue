@@ -32,7 +32,7 @@
           <v-container grid-list-xl>
             <v-layout row wrap align-center>
               <v-flex xs12 md3>
-                <v-card elevation="0" id="card">
+                <v-card elevation="3">
                   <v-card-text class="text-xs-center">
                     <v-icon x-large class="light-green--text text--lighten-2">
                       fa-clipboard-list
@@ -54,7 +54,7 @@
                 </v-card>
               </v-flex>
               <v-flex xs12 md3>
-                <v-card elevation="0" id="card">
+                <v-card elevation="3">
                   <v-card-text class="text-xs-center">
                     <v-icon x-large class="light-green--text text--lighten-2"
                       >fa-dollar-sign</v-icon
@@ -73,7 +73,7 @@
                 </v-card>
               </v-flex>
               <v-flex xs12 md3>
-                <v-card elevation="0" id="card">
+                <v-card elevation="3">
                   <v-card-text class="text-xs-center">
                     <v-icon x-large class="light-green--text text--lighten-2"
                       >fa-whatsapp</v-icon
@@ -94,7 +94,7 @@
                 </v-card>
               </v-flex>
               <v-flex xs12 md3>
-                <v-card elevation="0" id="card">
+                <v-card elevation="3">
                   <v-card-text class="text-xs-center">
                     <v-icon x-large class="light-green--text text--lighten-2"
                       >fa-tree</v-icon
@@ -123,6 +123,72 @@
               News & Announcements
             </h2>
           </div>
+        </v-flex>
+        <v-flex xs12>
+          <v-container grid-list-xl>
+            <v-layout row wrap align-center>
+              <v-flex xs12 sm6>
+                <v-card elevation="3">
+                  <v-img
+                    class="white--text"
+                    height="200px"
+                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+                  >
+                    <v-container fill-height fluid>
+                      <v-layout fill-height>
+                        <v-flex xs12 align-end flexbox>
+                          <span class="headline"
+                            >Top 10 Australian beaches</span
+                          >
+                        </v-flex>
+                      </v-layout>
+                    </v-container>
+                  </v-img>
+                  <v-card-title>
+                    <div class="text-xs-center">
+                      <span class="grey--text">Number 10</span><br />
+                      <span>Whitehaven Beach</span><br />
+                      <span>Whitsunday Island, Whitsunday Islands</span>
+                    </div>
+                  </v-card-title>
+                  <v-card-actions>
+                    <v-btn flat color="green">Share</v-btn>
+                    <v-btn flat color="green">Explore</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-flex>
+              <v-flex xs12 sm6>
+                <v-card elevation="3">
+                  <v-img
+                    class="white--text"
+                    height="200px"
+                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+                  >
+                    <v-container fill-height fluid>
+                      <v-layout fill-height>
+                        <v-flex xs12 align-end flexbox>
+                          <span class="headline"
+                            >Top 10 Australian beaches</span
+                          >
+                        </v-flex>
+                      </v-layout>
+                    </v-container>
+                  </v-img>
+                  <v-card-title>
+                    <div>
+                      <span class="grey--text">Number 10</span><br />
+                      <span>Whitehaven Beach</span><br />
+                      <span>Whitsunday Island, Whitsunday Islands</span>
+                    </div>
+                  </v-card-title>
+                  <v-card-actions>
+                    <v-btn flat color="green">Share</v-btn>
+                    <v-btn flat color="green">Explore</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-flex>
+            </v-layout>
+          </v-container>
         </v-flex>
         <v-flex xs12 sm4 class="my-1" id="top_section">
           <div class="text-xs-center">
@@ -157,7 +223,7 @@
 
 #top_section {
   padding-top: 33px;
-  padding-bottom: 33px;
+  padding-bottom: 11px;
 }
 </style>
 
