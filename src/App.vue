@@ -26,11 +26,11 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-menu v-for="(item, index) in dropDownItems" :key="index" offset-y>
-          <v-btn flat slot="activator">
+          <v-btn :to="item.link" flat slot="activator">
             <v-icon class="pr-2">{{ item.iconName }}</v-icon>
             {{ item.title }}
           </v-btn>
-          <v-list>
+          <v-list v-if="item.items">
             <v-list-tile
               v-for="(itemList, index) in item.items"
               :key="index"
@@ -40,18 +40,11 @@
             </v-list-tile>
           </v-list>
         </v-menu>
-        <v-btn flat to="/about">
-          <v-icon class="pr-2">fa-phone</v-icon>
-          Contact Us
-        </v-btn>
-        <v-btn flat to="/about">
-          <v-icon class="pr-2">fa-sign-in-alt</v-icon>
-          Admin
-        </v-btn>
       </v-toolbar-items>
     </v-toolbar>
 
     <router-view />
+    <Footer />
   </v-app>
 </template>
 
@@ -66,6 +59,8 @@
 </style>
 
 <script>
+import Footer from "./components/Footer";
+
 export default {
   computed: {
     isLoggedIn: function() {
@@ -82,13 +77,17 @@ export default {
       });
     });
   },
+  components: {
+    Footer
+  },
   data() {
     return {
       dropDownItems: [
         {
           title: "Badminton",
           items: ["Men's", "Women's", "Kid's"],
-          iconName: "fa-table-tennis"
+          iconName: "fa-table-tennis",
+          link: "/mens/badminton"
         },
         {
           title: "Basketball",
@@ -105,12 +104,14 @@ export default {
           items: ["Men's", "Women's", "Kid's"],
           iconName: "fa-hockey-puck"
         },
-        { title: "Yoga", items: ["Men's", "Women's"], iconName: "fa-heart" },
         {
           title: "Table Tennis",
           items: ["Men's", "Women's", "Kid's"],
           iconName: "fa-table-tennis"
-        }
+        },
+        { title: "Yoga", items: ["Men's", "Women's"], iconName: "fa-heart" },
+        { title: "Contact Us", iconName: "fa-phone" },
+        { title: "Admin", iconName: "fa-sign-in-alt", link: "/login" }
       ],
       drawer: null,
       windowWidth: window.innerWidth

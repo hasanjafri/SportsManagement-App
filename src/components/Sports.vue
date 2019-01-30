@@ -50,11 +50,11 @@
                 <v-card elevation="0" id="card">
                   <v-card-text class="text-xs-center">
                     <v-icon x-large class="light-green--text text--lighten-2"
-                      >fa-clock</v-icon
+                      >fa-dollar-sign</v-icon
                     >
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
-                    <div class="headline text-xs-center">Updated Daily!</div>
+                    <div class="headline text-xs-center">Fee</div>
                   </v-card-title>
                   <v-card-text>
                     Cras facilisis mi vitae nunc lobortis pharetra. Nulla
@@ -69,12 +69,12 @@
                 <v-card elevation="0" id="card">
                   <v-card-text class="text-xs-center">
                     <v-icon x-large class="light-green--text text--lighten-2"
-                      >fa-tasks</v-icon
+                      >fa-whatsapp</v-icon
                     >
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
                     <div class="headline text-xs-center">
-                      Managed by the Community.
+                      WhatsApp Group
                     </div>
                   </v-card-title>
                   <v-card-text>
@@ -90,12 +90,12 @@
                 <v-card elevation="0" id="card">
                   <v-card-text class="text-xs-center">
                     <v-icon x-large class="light-green--text text--lighten-2"
-                      >fa-tasks</v-icon
+                      >fa-tree</v-icon
                     >
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
                     <div class="headline text-xs-center">
-                      Managed by the Community.
+                      Current Season
                     </div>
                   </v-card-title>
                   <v-card-text>
@@ -109,6 +109,34 @@
               </v-flex>
             </v-layout>
           </v-container>
+        </v-flex>
+        <v-flex xs12 sm4 class="my-1" id="top_section">
+          <div class="text-xs-center">
+            <h2 class="headline">
+              News & Announcements
+            </h2>
+          </div>
+        </v-flex>
+        <v-flex xs12 sm4 class="my-1" id="top_section">
+          <div class="text-xs-center">
+            <h2 class="headline">
+              Events
+            </h2>
+          </div>
+        </v-flex>
+        <v-flex xs12 sm4 class="my-1" id="top_section">
+          <div class="text-xs-center">
+            <h2 class="headline">
+              Forms
+            </h2>
+          </div>
+        </v-flex>
+        <v-flex xs12 sm4 class="my-1" id="top_section">
+          <div class="text-xs-center">
+            <h2 class="headline">
+              Contact
+            </h2>
+          </div>
         </v-flex>
       </v-layout>
     </section>
