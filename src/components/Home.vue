@@ -1,7 +1,7 @@
 <template>
   <v-content>
     <section>
-      <v-parallax :src="require('../assets/hero.jpg')" height="400" />
+      <v-parallax :src="require('../assets/img/hero.jpg')" height="400" />
     </section>
 
     <section>
@@ -50,7 +50,7 @@
                     >
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
-                    <div class="headline">Updated Daily!</div>
+                    <div class="headline text-xs-center">Updated Daily!</div>
                   </v-card-title>
                   <v-card-text>
                     Cras facilisis mi vitae nunc lobortis pharetra. Nulla
@@ -89,7 +89,7 @@
     </section>
 
     <section>
-      <v-parallax :src="require('../assets/sports.jpg')" height="380">
+      <v-parallax :src="require('../assets/img/sports.jpg')" height="380">
         <!-- <v-layout column align-center justify-center>
           <div class="headline white--text mb-3 text-xs-center">
             Staying healthy has never been easier

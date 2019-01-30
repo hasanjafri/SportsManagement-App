@@ -41,6 +41,10 @@
           </v-list>
         </v-menu>
         <v-btn flat to="/about">
+          <v-icon class="pr-2">fa-phone</v-icon>
+          Contact Us
+        </v-btn>
+        <v-btn flat to="/about">
           <v-icon class="pr-2">fa-sign-in-alt</v-icon>
           Admin
         </v-btn>
@@ -101,7 +105,12 @@ export default {
           items: ["Men's", "Women's", "Kid's"],
           iconName: "fa-hockey-puck"
         },
-        { title: "Yoga", items: ["Men's", "Women's"], iconName: "fa-heart" }
+        { title: "Yoga", items: ["Men's", "Women's"], iconName: "fa-heart" },
+        {
+          title: "Table Tennis",
+          items: ["Men's", "Women's", "Kid's"],
+          iconName: "fa-table-tennis"
+        }
       ],
       drawer: null,
       windowWidth: window.innerWidth

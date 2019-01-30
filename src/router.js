@@ -6,6 +6,7 @@ import About from "./views/About.vue";
 import Login from "./components/Login.vue";
 import Register from "./components/Register.vue";
 import Secure from "./components/Secure.vue";
+import Sports from "./views/Sports.vue";
 
 Vue.use(Router);
 
@@ -39,6 +40,11 @@ let router = new Router({
       path: "/about",
       name: "about",
       component: About
+    },
+    {
+      path: "/mens/badminton",
+      name: "Men's Badminton",
+      component: Sports
     }
   ]
 });
