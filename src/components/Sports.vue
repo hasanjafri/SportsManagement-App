@@ -124,6 +124,13 @@
             </h2>
           </div>
         </v-flex>
+        <v-flex xs12 sm4 class="my-1" id="top_section">
+          <div class="text-xs-center">
+            <h2 class="headline">
+              Events
+            </h2>
+          </div>
+        </v-flex>
         <v-flex xs12>
           <v-container grid-list-xl>
             <v-layout row wrap align-center>
@@ -191,25 +198,86 @@
           </v-container>
         </v-flex>
         <v-flex xs12 sm4 class="my-1" id="top_section">
-          <div class="text-xs-center">
+          <div class="text-xs-center" v-bind:style="{ paddingBottom: '11px' }">
             <h2 class="headline">
-              Events
+              Informational Documents
             </h2>
+          </div>
+          <div>
+            <v-btn color="success">Rules</v-btn>
+            <v-btn color="error">Drop-In Dates</v-btn>
+            <v-btn color="warning">Ranking System</v-btn>
+            <v-btn color="info">Upcoming Tournaments</v-btn>
           </div>
         </v-flex>
         <v-flex xs12 sm4 class="my-1" id="top_section">
-          <div class="text-xs-center">
-            <h2 class="headline">
-              Forms
-            </h2>
-          </div>
-        </v-flex>
-        <v-flex xs12 sm4 class="my-1" id="top_section">
-          <div class="text-xs-center">
-            <h2 class="headline">
-              Contact
-            </h2>
-          </div>
+          <section>
+            <v-container grid-list-xl>
+              <v-layout row wrap justify-center class="my-1">
+                <v-flex xs12 sm4>
+                  <v-card elevation="0" id="card">
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline">Who We Are</div>
+                    </v-card-title>
+                    <v-card-text>
+                      Cras facilisis mi vitae nunc lobortis pharetra. Nulla
+                      volutpat tincidunt ornare. Pellentesque habitant morbi
+                      tristique senectus et netus et malesuada fames ac turpis
+                      egestas. Nullam in aliquet odio. Aliquam eu est vitae
+                      tellus bibendum tincidunt. Suspendisse potenti.
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+                <v-flex xs12 sm4 offset-sm1>
+                  <v-card elevation="0" id="card">
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline">Contact us</div>
+                    </v-card-title>
+                    <v-card-text>
+                      Contact us if you have any questions or require more
+                      information about an event
+                    </v-card-text>
+                    <v-list class="transparent">
+                      <v-list-tile>
+                        <v-list-tile-action>
+                          <v-icon class="light-green--text text--darken-1"
+                            >fa-phone</v-icon
+                          >
+                        </v-list-tile-action>
+                        <v-list-tile-content>
+                          <v-list-tile-title>(905) 459-0891</v-list-tile-title>
+                        </v-list-tile-content>
+                      </v-list-tile>
+                      <v-list-tile>
+                        <v-list-tile-action>
+                          <v-icon class="light-green--text text--darken-1"
+                            >fa-home</v-icon
+                          >
+                        </v-list-tile-action>
+                        <v-list-tile-content>
+                          <v-list-tile-title
+                            >Brampton, ON, Canada</v-list-tile-title
+                          >
+                        </v-list-tile-content>
+                      </v-list-tile>
+                      <v-list-tile>
+                        <v-list-tile-action>
+                          <v-icon class="light-green--text text--darken-1"
+                            >fa-envelope</v-icon
+                          >
+                        </v-list-tile-action>
+                        <v-list-tile-content>
+                          <v-list-tile-title
+                            >email@domain.com</v-list-tile-title
+                          >
+                        </v-list-tile-content>
+                      </v-list-tile>
+                    </v-list>
+                  </v-card>
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </section>
         </v-flex>
       </v-layout>
     </section>
