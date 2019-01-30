@@ -2,7 +2,7 @@
   <v-content>
     <section>
       <v-layout class="my-1" column wrap align-center>
-        <v-carousel dark height="750">
+        <v-carousel class="hidden-md-and-down" dark height="750">
           <v-carousel-item
             v-for="(item, i) in images"
             :key="i"
@@ -178,7 +178,13 @@ export default {
         {
           src: require("@/assets/img/b4.jpeg")
         }
-      ]
+      ],
+      windowWidth: window.innerWidth
+    };
+  },
+  mounted() {
+    window.onresize = () => {
+      this.windowWidth = window.innerWidth;
     };
   }
 };
