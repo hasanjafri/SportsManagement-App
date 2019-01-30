@@ -2,6 +2,13 @@
   <v-content>
     <section>
       <v-layout class="my-1" column wrap align-center>
+        <v-carousel dark height="750">
+          <v-carousel-item
+            v-for="(item, i) in images"
+            :key="i"
+            :src="item.src"
+          ></v-carousel-item>
+        </v-carousel>
         <v-flex xs12 sm4 class="my-1" id="top_section">
           <div class="text-xs-center">
             <h2 class="headline">
@@ -157,7 +164,22 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      images: [
+        {
+          src: require("@/assets/img/b1.jpeg")
+        },
+        {
+          src: require("@/assets/img/b2.jpeg")
+        },
+        {
+          src: require("@/assets/img/b3.jpeg")
+        },
+        {
+          src: require("@/assets/img/b4.jpeg")
+        }
+      ]
+    };
   }
 };
 </script>
