@@ -5,7 +5,12 @@
         <v-expansion-panel-content v-for="(item, i) in dropDownItems" :key="i">
           <div slot="header">{{ item.title }}</div>
           <v-list>
-            <v-list-tile @click="" v-for="(itemList, i) in item.items" :key="i">
+            <v-list-tile
+              @click=""
+              :to="Object.values(item.links)[i]"
+              v-for="(itemList, i) in item.items"
+              :key="i"
+            >
               <v-list-tile-content>
                 <v-list-tile-title>{{ itemList }}</v-list-tile-title>
               </v-list-tile-content>
@@ -20,13 +25,15 @@
         @click.stop="drawer = !drawer"
       ></v-toolbar-side-icon>
       <v-toolbar-title class="headline text-uppercase">
-        <span>MIC </span>
-        <span class="font-weight-light">Sports Facilities</span>
+        <router-link to="/" class="white--text" id="link">MIC </router-link>
+        <router-link to="/" class="font-weight-light"
+          >Sports Facilities</router-link
+        >
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-menu v-for="(item, index) in dropDownItems" :key="index" offset-y>
-          <v-btn :to="item.link" flat slot="activator">
+          <v-btn flat slot="activator">
             <v-icon class="pr-2">{{ item.iconName }}</v-icon>
             {{ item.title }}
           </v-btn>
@@ -35,6 +42,7 @@
               v-for="(itemList, index) in item.items"
               :key="index"
               @click=""
+              :to="Object.values(item.links)[index]"
             >
               <v-list-tile-title>{{ itemList }}</v-list-tile-title>
             </v-list-tile>
@@ -55,6 +63,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+#link li a {
+  text-decoration: none;
 }
 </style>
 
@@ -87,33 +98,62 @@ export default {
           title: "Badminton",
           items: ["Men's", "Women's", "Kid's"],
           iconName: "fa-table-tennis",
-          link: "/mens/badminton"
+          links: {
+            mens: "/mens/badminton",
+            womens: "/mens/badminton",
+            kids: "/mens/badminton"
+          }
         },
         {
           title: "Basketball",
           items: ["Men's", "Women's", "Kid's"],
-          iconName: "fa-basketball-ball"
+          iconName: "fa-basketball-ball",
+          links: {
+            mens: "/mens/badminton",
+            womens: "/mens/badminton",
+            kids: "/mens/badminton"
+          }
         },
         {
           title: "VolleyBall",
           items: ["Men's", "Women's", "Kid's"],
-          iconName: "fa-volleyball-ball"
+          iconName: "fa-volleyball-ball",
+          links: {
+            mens: "/mens/badminton",
+            womens: "/mens/badminton",
+            kids: "/mens/badminton"
+          }
         },
         {
           title: "Hockey",
           items: ["Men's", "Women's", "Kid's"],
-          iconName: "fa-hockey-puck"
+          iconName: "fa-hockey-puck",
+          links: {
+            mens: "/mens/badminton",
+            womens: "/mens/badminton",
+            kids: "/mens/badminton"
+          }
         },
         {
           title: "Table Tennis",
           items: ["Men's", "Women's", "Kid's"],
-          iconName: "fa-table-tennis"
+          iconName: "fa-table-tennis",
+          links: {
+            mens: "/mens/badminton",
+            womens: "/mens/badminton",
+            kids: "/mens/badminton"
+          }
         },
-        { title: "Yoga", items: ["Men's", "Women's"], iconName: "fa-heart" },
-        { title: "Contact Us", iconName: "fa-phone" },
+        {
+          title: "Yoga",
+          items: ["Men's", "Women's"],
+          iconName: "fa-heart",
+          links: { mens: "/mens/badminton", womens: "/mens/badminton" }
+        },
+        { title: "Contact Us", iconName: "fa-phone", link: "/contact" },
         { title: "Admin", iconName: "fa-sign-in-alt", link: "/login" }
       ],
-      drawer: null,
+      drawer: false,
       windowWidth: window.innerWidth
     };
   },

@@ -118,11 +118,27 @@
           </v-container>
         </v-flex>
         <v-flex xs12 sm4 class="my-1" id="top_section">
-          <div class="text-xs-center">
+          <div class="text-xs-center" v-bind:style="{ paddingBottom: '11px' }">
             <h2 class="headline">
               News & Announcements
             </h2>
           </div>
+          <v-card elevation="3">
+            <v-expansion-panel focusable>
+              <v-expansion-panel-content v-for="(item, i) in 5" :key="i">
+                <div slot="header">Item</div>
+                <v-card>
+                  <v-card-text class="grey lighten-3"
+                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</v-card-text
+                  >
+                </v-card>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-card>
         </v-flex>
         <v-flex xs12 sm4 class="my-1" id="top_section">
           <div class="text-xs-center">
@@ -198,16 +214,16 @@
           </v-container>
         </v-flex>
         <v-flex xs12 sm4 class="my-1" id="top_section">
-          <div class="text-xs-center" v-bind:style="{ paddingBottom: '11px' }">
+          <div class="text-xs-center" v-bind:style="{ paddingBottom: '22px' }">
             <h2 class="headline">
               Informational Documents
             </h2>
           </div>
           <div>
-            <v-btn color="success">Rules</v-btn>
-            <v-btn color="error">Drop-In Dates</v-btn>
-            <v-btn color="warning">Ranking System</v-btn>
-            <v-btn color="info">Upcoming Tournaments</v-btn>
+            <v-btn large color="success">Rules</v-btn><br />
+            <v-btn large color="error">Drop-In Dates</v-btn><br />
+            <v-btn large color="warning">Ranking System</v-btn><br />
+            <v-btn large color="info">Upcoming Tournaments</v-btn>
           </div>
         </v-flex>
         <v-flex xs12 sm4 class="my-1" id="top_section">
@@ -217,14 +233,17 @@
                 <v-flex xs12 sm4>
                   <v-card elevation="0" id="card">
                     <v-card-title primary-title class="layout justify-center">
-                      <div class="headline">Who We Are</div>
+                      <div
+                        class="headline"
+                        v-bind:style="{ whiteSpace: 'nowrap' }"
+                      >
+                        This group is managed by:
+                      </div>
                     </v-card-title>
                     <v-card-text>
-                      Cras facilisis mi vitae nunc lobortis pharetra. Nulla
-                      volutpat tincidunt ornare. Pellentesque habitant morbi
-                      tristique senectus et netus et malesuada fames ac turpis
-                      egestas. Nullam in aliquet odio. Aliquam eu est vitae
-                      tellus bibendum tincidunt. Suspendisse potenti.
+                      Safdar<br />
+                      Safdar2<br />
+                      Safdar3
                     </v-card-text>
                   </v-card>
                 </v-flex>
