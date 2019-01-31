@@ -34,8 +34,8 @@
         @click.stop="drawer = !drawer"
       ></v-toolbar-side-icon>
       <v-toolbar-title class="headline text-uppercase">
-        <router-link to="/" class="white--text" id="link">MIC </router-link>
-        <router-link to="/" class="white--text font-weight-light" id="link"
+        <router-link to="/" class="white--text">MIC </router-link>
+        <router-link to="/" class="white--text font-weight-light"
           >Sports Facilities</router-link
         >
       </v-toolbar-title>
@@ -169,7 +169,6 @@ export default {
   mounted() {
     window.onresize = () => {
       this.windowWidth = window.innerWidth;
-      console.log(this.windowWidth);
     };
   },
   methods: {
