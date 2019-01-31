@@ -1,6 +1,13 @@
 <template>
   <v-app id="app" light>
-    <v-navigation-drawer v-if="windowWidth <= 960" v-model="drawer" fixed app>
+    <v-navigation-drawer
+      temporary
+      floating
+      v-if="windowWidth < 1450"
+      v-model="drawer"
+      fixed
+      app
+    >
       <v-expansion-panel>
         <v-expansion-panel-content v-for="(item, i) in dropDownItems" :key="i">
           <div slot="header">{{ item.title }}</div>
@@ -12,7 +19,9 @@
               :key="i"
             >
               <v-list-tile-content>
-                <v-list-tile-title>{{ itemList }}</v-list-tile-title>
+                <v-list-tile-title class="black--text">{{
+                  itemList
+                }}</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
           </v-list>
@@ -21,17 +30,17 @@
     </v-navigation-drawer>
     <v-toolbar dark app color="light-green darken-1">
       <v-toolbar-side-icon
-        class="hidden-md-and-up"
+        v-if="windowWidth < 1450"
         @click.stop="drawer = !drawer"
       ></v-toolbar-side-icon>
       <v-toolbar-title class="headline text-uppercase">
         <router-link to="/" class="white--text" id="link">MIC </router-link>
-        <router-link to="/" class="font-weight-light"
+        <router-link to="/" class="white--text font-weight-light" id="link"
           >Sports Facilities</router-link
         >
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-sm-and-down">
+      <v-toolbar-items v-if="windowWidth >= 1450">
         <v-menu v-for="(item, index) in dropDownItems" :key="index" offset-y>
           <v-btn flat slot="activator">
             <v-icon class="pr-2">{{ item.iconName }}</v-icon>
@@ -64,7 +73,7 @@
   text-align: center;
   color: #2c3e50;
 }
-#link li a {
+a {
   text-decoration: none;
 }
 </style>
@@ -160,6 +169,7 @@ export default {
   mounted() {
     window.onresize = () => {
       this.windowWidth = window.innerWidth;
+      console.log(this.windowWidth);
     };
   },
   methods: {
