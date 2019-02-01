@@ -1,12 +1,12 @@
 <template>
   <v-app id="app" light>
     <v-navigation-drawer
-      temporary
-      floating
-      v-if="windowWidth < 1450"
       v-model="drawer"
       fixed
       app
+      dark
+      permanent
+      class="light-green lighten-2"
     >
       <v-expansion-panel>
         <v-expansion-panel-content v-for="(item, i) in dropDownItems" :key="i">
@@ -19,7 +19,7 @@
               :key="i"
             >
               <v-list-tile-content>
-                <v-list-tile-title class="black--text">{{
+                <v-list-tile-title class="white--text">{{
                   itemList
                 }}</v-list-tile-title>
               </v-list-tile-content>
@@ -27,19 +27,20 @@
           </v-list>
         </v-expansion-panel-content>
       </v-expansion-panel>
+      <v-spacer />
+      <Footer v-bind:style="{ position: 'absolute', marginTop: '30px' }" />
     </v-navigation-drawer>
-    <v-toolbar dark app color="light-green darken-1">
-      <v-toolbar-side-icon
-        v-if="windowWidth < 1450"
+    <v-toolbar dark app color="light-green lighten-1">
+      <!-- <v-toolbar-side-icon
         @click.stop="drawer = !drawer"
-      ></v-toolbar-side-icon>
+      ></v-toolbar-side-icon> -->
       <v-toolbar-title class="headline text-uppercase">
-        <router-link to="/" class="white--text">MIC </router-link>
-        <router-link to="/" class="white--text font-weight-light"
+        <router-link to="/" class="black--text">MIC </router-link>
+        <router-link to="/" class="black--text font-weight-light"
           >Sports Facilities</router-link
         >
       </v-toolbar-title>
-      <v-spacer></v-spacer>
+      <!-- <v-spacer></v-spacer>
       <v-toolbar-items v-if="windowWidth >= 1450">
         <v-menu v-for="(item, index) in dropDownItems" :key="index" offset-y>
           <v-btn flat slot="activator">
@@ -57,11 +58,10 @@
             </v-list-tile>
           </v-list>
         </v-menu>
-      </v-toolbar-items>
+      </v-toolbar-items> -->
     </v-toolbar>
 
     <router-view />
-    <Footer />
   </v-app>
 </template>
 
