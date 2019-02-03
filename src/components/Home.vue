@@ -1,10 +1,10 @@
 <template>
-  <v-content>
+  <v-content class="grey lighten-4">
     <section>
       <v-parallax :src="require('../assets/img/hero.jpg')" height="400" />
     </section>
 
-    <section>
+    <section class="grey lighten-4">
       <v-layout class="my-1" column wrap align-center>
         <v-flex xs12 sm4 class="my-1">
           <div class="text-xs-center">
@@ -24,7 +24,7 @@
               <v-flex xs12 md4>
                 <v-card elevation="0" id="card">
                   <v-card-text class="text-xs-center">
-                    <v-icon x-large class="light-green--text text--lighten-2"
+                    <v-icon x-large class="grey--text text--darken-3"
                       >fa-user</v-icon
                     >
                   </v-card-text>
@@ -45,7 +45,7 @@
               <v-flex xs12 md4>
                 <v-card elevation="0" id="card">
                   <v-card-text class="text-xs-center">
-                    <v-icon x-large class="light-green--text text--lighten-2"
+                    <v-icon x-large class="grey--text text--darken-3"
                       >fa-clock</v-icon
                     >
                   </v-card-text>
@@ -64,7 +64,7 @@
               <v-flex xs12 md4>
                 <v-card elevation="0" id="card">
                   <v-card-text class="text-xs-center">
-                    <v-icon x-large class="light-green--text text--lighten-2"
+                    <v-icon x-large class="grey--text text--darken-3"
                       >fa-tasks</v-icon
                     >
                   </v-card-text>
