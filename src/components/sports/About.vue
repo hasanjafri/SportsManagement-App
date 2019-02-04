@@ -1,17 +1,25 @@
 <template>
-  <v-layout class="my-1" column wrap align-center>
+  <v-layout class="my-1 topPadding" column align-start>
     <v-flex xs12 sm4 class="my-1">
       <div class="text-xs-center">
-        <h2 class="headline">
-          Welcome to MIC Sports Facilities based in Brampton, ON, Canada.
+        <h2 class="display-3 text-xs-left text-uppercase secPadding">
+          About MIC Badminton Club
         </h2>
-        <span class="subheading"
-          >This sports portal is created for the community to provide
-          information on sports related activities on a centralized platform
-          offered at the Masumeen Islamic Center. yeah yeah yeah yeah yerah
-          yreahs</span
+        <h3
+          class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding"
         >
+          Mission, Goal, and Values
+        </h3>
       </div>
     </v-flex>
   </v-layout>
 </template>
+
+<style>
+.topPadding {
+  padding-top: 3%;
+}
+.secPadding {
+  padding-left: 5%;
+}
+</style>
