@@ -17,7 +17,11 @@
         justify-center
         align-center
         class="topPadding"
-        v-bind:style="{ paddingLeft: '1%', paddingRight: '1%' }"
+        v-bind:style="{
+          paddingLeft: '2%',
+          paddingRight: '2%',
+          marginBottom: '5%'
+        }"
       >
         <v-img
           :src="require('@/assets/img/badmintonlogo.png')"
@@ -49,7 +53,7 @@
 
 <style>
 .topPadding {
-  padding-top: 1%;
+  padding-top: 3%;
 }
 .secPadding {
   padding-left: 5%;
