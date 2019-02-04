@@ -57,7 +57,6 @@
 }
 .secPadding {
   padding-left: 20px;
-  white-space: nowrap;
 }
 .inline {
   display: inline;
