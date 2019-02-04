@@ -4,9 +4,11 @@
       <Carousel />
     </section>
 
-    <section class="grey lighten-4">
+    <section class="grey lighten-3">
       <About />
     </section>
+
+    <section class="grey lighten-2"></section>
   </v-content>
 </template>
 
