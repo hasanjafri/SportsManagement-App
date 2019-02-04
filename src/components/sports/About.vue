@@ -31,7 +31,7 @@
           v-bind:style="{ float: 'left' }"
         ></v-img>
         <p
-          class="title inline text-xs-center blue-grey--text text--darken-3 font-weight-light"
+          class="title inline text-xs-left blue-grey--text text--darken-3 font-weight-light py-3"
         >
           Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat
           tincidunt ornare. Pellentesque habitant morbi tristique senectus et
