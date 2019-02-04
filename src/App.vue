@@ -39,7 +39,7 @@
       ></v-toolbar-side-icon>
       <v-toolbar-title class="headline text-uppercase">
         <router-link to="/" class="black--text">MIC </router-link>
-        <router-link to="/" class="black--text font-weight-light"
+        <router-link to="/about" class="black--text font-weight-light"
           >Sports Facilities</router-link
         >
       </v-toolbar-title>
@@ -164,7 +164,7 @@ export default {
           links: { mens: "/mens/badminton", womens: "/mens/badminton" }
         },
         { title: "Contact Us", iconName: "fa-phone", link: "/contact" },
-        { title: "Admin", iconName: "fa-sign-in-alt", link: "/login" }
+        { title: "Admin", iconName: "fa-sign-in-alt", link: "/about" }
       ],
       drawer: false,
       windowWidth: window.innerWidth
