@@ -21,10 +21,12 @@
                   'linear-gradient(rgba(0, 0,0, 0.55), rgba(0, 0,0, 0.55))'
               }"
             >
-              <h1 class="white--text mb-2 display-1 text-xs-center font-weight-bold">
+              <h1
+                class="white--text mb-2 display-1 text-xs-center font-weight-bold"
+              >
                 WELCOME
               </h1>
-              <br/>
+              <br />
               <div class="subheading mb-3 text-xs-center">
                 Registrations open for 2019-2020
               </div>
