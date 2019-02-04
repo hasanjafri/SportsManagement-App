@@ -7,7 +7,7 @@
       dark
       floating
       fixed
-      v-if="windowWidth < 1450"
+      v-if="windowWidth < 1400"
     >
       <v-expansion-panel>
         <v-expansion-panel-content v-for="(item, i) in dropDownItems" :key="i">
@@ -34,7 +34,7 @@
     <v-toolbar dark app color="grey lighten-3">
       <v-toolbar-side-icon
         class="black--text"
-        v-if="windowWidth < 1450"
+        v-if="windowWidth < 1400"
         @click.stop="drawer = !drawer"
       ></v-toolbar-side-icon>
       <v-toolbar-title class="headline text-uppercase">
@@ -44,7 +44,7 @@
         >
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items v-if="windowWidth >= 1450">
+      <v-toolbar-items v-if="windowWidth >= 1400">
         <v-menu v-for="(item, index) in dropDownItems" :key="index" offset-y>
           <v-btn class="black--text" flat slot="activator">
             <v-icon class="pr-2">{{ item.iconName }}</v-icon>
@@ -69,8 +69,9 @@
 </template>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

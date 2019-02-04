@@ -2,12 +2,42 @@
   <v-content>
     <section>
       <v-layout class="my-1" column wrap align-center>
-        <v-carousel v-if="windowWidth >= 1450" dark height="750">
+        <v-carousel v-if="windowWidth >= 1400" dark height="750">
           <v-carousel-item
+            lazy
             v-for="(item, i) in images"
             :key="i"
             :src="item.src"
-          ></v-carousel-item>
+          >
+            <v-layout
+              fill-height
+              align-content-center
+              column
+              align-center
+              justify-center
+              class="white--text text-xs-center"
+              v-bind:style="{
+                background:
+                  'linear-gradient(rgba(0, 0,0, 0.55), rgba(0, 0,0, 0.55))'
+              }"
+            >
+              <h1 class="white--text mb-2 display-1 text-xs-center font-weight-bold">
+                WELCOME
+              </h1>
+              <br/>
+              <div class="subheading mb-3 text-xs-center">
+                Registrations open for 2019-2020
+              </div>
+              <v-btn
+                class="blue lighten-2 mt-5"
+                dark
+                large
+                href="/pre-made-themes"
+              >
+                Get Started
+              </v-btn>
+            </v-layout></v-carousel-item
+          >
         </v-carousel>
         <v-flex xs12 sm4 class="my-1" id="top_section">
           <div class="text-xs-center">
@@ -335,11 +365,17 @@ export default {
       windowWidth: window.innerWidth
     };
   },
-  mounted() {
-    window.onresize = () => {
+  created() {
+    window.addEventListener("resize", this.onWindowResize);
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.onWindowResize);
+  },
+  methods: {
+    onWindowResize() {
       this.windowWidth = window.innerWidth;
       console.log(this.windowWidth);
-    };
+    }
   }
 };
 </script>
