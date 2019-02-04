@@ -20,7 +20,7 @@
         v-bind:style="{
           paddingLeft: '2%',
           paddingRight: '2%',
-          marginBottom: '5%'
+          marginBottom: '3%'
         }"
       >
         <v-img
@@ -56,7 +56,7 @@
   padding-top: 3%;
 }
 .secPadding {
-  padding-left: 5%;
+  padding-left: 20px;
   white-space: nowrap;
 }
 .inline {
