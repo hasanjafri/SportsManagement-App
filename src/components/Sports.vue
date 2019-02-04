@@ -2,57 +2,25 @@
   <v-content>
     <section>
       <v-layout class="my-1" column wrap align-center>
-        <v-carousel v-if="windowWidth >= 1400" dark height="750">
-          <v-carousel-item
-            lazy
-            v-for="(item, i) in images"
-            :key="i"
-            :src="item.src"
-          >
-            <v-layout
-              fill-height
-              align-content-center
-              column
-              align-center
-              justify-center
-              class="white--text text-xs-center"
-              v-bind:style="{
-                background:
-                  'linear-gradient(rgba(0, 0,0, 0.55), rgba(0, 0,0, 0.55))'
-              }"
-            >
-              <h1
-                class="white--text mb-2 display-1 text-xs-center font-weight-bold"
-              >
-                WELCOME
-              </h1>
-              <br />
-              <div class="subheading mb-3 text-xs-center">
-                Registrations open for 2019-2020
+        <Carousel />
+        <v-container class="grey lighten-3">
+          <v-layout class="my-1" column wrap align-center>
+            <v-flex xs12 sm4 class="my-1">
+              <div class="text-xs-center">
+                <h2 class="headline">
+                  Welcome to MIC Sports Facilities based in Brampton, ON,
+                  Canada.
+                </h2>
+                <span class="subheading"
+                  >This sports portal is created for the community to provide
+                  information on sports related activities on a centralized
+                  platform offered at the Masumeen Islamic Center. yeah yeah
+                  yeah yeah yerah yreahs</span
+                >
               </div>
-              <v-btn
-                class="blue lighten-2 mt-5"
-                dark
-                large
-                href="/pre-made-themes"
-              >
-                Get Started
-              </v-btn>
-            </v-layout></v-carousel-item
-          >
-        </v-carousel>
-        <v-flex xs12 sm4 class="my-1" id="top_section">
-          <div class="text-xs-center">
-            <h2 class="headline">
-              MIC Men's Badminton
-            </h2>
-            <span class="subheading"
-              >This sports portal is created for the community to provide
-              information on sports related activities on a centralized platform
-              offered at the Masumeen Islamic Center.</span
-            >
-          </div>
-        </v-flex>
+            </v-flex>
+          </v-layout>
+        </v-container>
         <v-flex xs12 sm4 class="my-1">
           <div class="text-xs-center">
             <h2 class="headline">
@@ -347,37 +315,11 @@
 </style>
 
 <script>
+import Carousel from "./sports/Carousel";
+
 export default {
-  data() {
-    return {
-      images: [
-        {
-          src: require("@/assets/img/b1.jpeg")
-        },
-        {
-          src: require("@/assets/img/b2.jpeg")
-        },
-        {
-          src: require("@/assets/img/b3.jpeg")
-        },
-        {
-          src: require("@/assets/img/b4.jpeg")
-        }
-      ],
-      windowWidth: window.innerWidth
-    };
-  },
-  created() {
-    window.addEventListener("resize", this.onWindowResize);
-  },
-  destroyed() {
-    window.removeEventListener("resize", this.onWindowResize);
-  },
-  methods: {
-    onWindowResize() {
-      this.windowWidth = window.innerWidth;
-      console.log(this.windowWidth);
-    }
+  components: {
+    Carousel
   }
 };
 </script>
