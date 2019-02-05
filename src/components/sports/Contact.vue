@@ -1,71 +1,42 @@
 <template>
-  <v-layout class="my-1" column align-center>
+  <v-layout class="my-1 topPadding" column align-start>
     <v-flex xs12 sm4 class="my-1">
-      <section>
-        <v-container grid-list-xl>
-          <v-layout row wrap justify-center class="my-1">
-            <v-flex xs12 sm4>
-              <v-card elevation="0" id="card">
-                <v-card-title primary-title class="layout justify-center">
-                  <div class="headline" v-bind:style="{ whiteSpace: 'nowrap' }">
-                    This group is managed by:
-                  </div>
-                </v-card-title>
-                <v-card-text class="title">
-                  Safdar<br />
-                  Safdar2<br />
-                  Safdar3
-                </v-card-text>
-              </v-card>
-            </v-flex>
-            <v-flex xs12 sm4 offset-sm1>
-              <v-card elevation="0" id="card">
-                <v-card-title primary-title class="layout justify-center">
-                  <div class="headline">Contact us</div>
-                </v-card-title>
-                <v-card-text>
-                  Contact us if you have any questions or require more
-                  information about an event
-                </v-card-text>
-                <v-list class="transparent">
-                  <v-list-tile>
-                    <v-list-tile-action>
-                      <v-icon class="light-green--text text--darken-1"
-                        >fa-phone</v-icon
-                      >
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                      <v-list-tile-title>(905) 459-0891</v-list-tile-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
-                  <v-list-tile>
-                    <v-list-tile-action>
-                      <v-icon class="light-green--text text--darken-1"
-                        >fa-home</v-icon
-                      >
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                      <v-list-tile-title
-                        >Brampton, ON, Canada</v-list-tile-title
-                      >
-                    </v-list-tile-content>
-                  </v-list-tile>
-                  <v-list-tile>
-                    <v-list-tile-action>
-                      <v-icon class="light-green--text text--darken-1"
-                        >fa-envelope</v-icon
-                      >
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                      <v-list-tile-title>email@domain.com</v-list-tile-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
-                </v-list>
-              </v-card>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </section>
+      <div class="text-xs-center secPadding">
+        <h2 class="display-3 text-xs-left text-uppercase">
+          Contact Us
+        </h2>
+        <h3
+          class="display-1 text-xs-left text-uppercase font-weight-light grey--text pt-2"
+        >
+          This group is managed by
+        </h3>
+      </div>
+    </v-flex>
+    <v-flex xs12 sm4 class="my-1">
+      <v-layout class="pt-3 px-5">
+        <v-icon x-large class="green--text text---darken-5">fa-user</v-icon>
+        <p
+          class="title inline text-xs-left blue-grey--text text--darken-3 font-weight-medium pt-3 px-3"
+        >
+          Safdar Abbas
+        </p>
+      </v-layout>
+      <v-layout class="pt-3 px-5">
+        <v-icon x-large class="green--text text---darken-5">fa-phone</v-icon>
+        <p
+          class="title inline text-xs-left blue-grey--text text--darken-3 font-weight-medium pt-3 px-3"
+        >
+          (905) 459-0891
+        </p>
+      </v-layout>
+      <v-layout class="pt-3 px-5" v-bind:style="{ width: '100%' }">
+        <v-icon x-large class="green--text text---darken-5">fa-at</v-icon>
+        <p
+          class="title inline text-xs-left blue-grey--text text--darken-3 font-weight-medium pt-3 px-3"
+        >
+          email@domain.com
+        </p>
+      </v-layout>
     </v-flex>
   </v-layout>
 </template>
