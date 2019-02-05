@@ -15,12 +15,17 @@
     <section class="px-5 py-5 grey lighten-3">
       <Location />
     </section>
+
+    <section class="px-5">
+      <Contact />
+    </section>
   </v-content>
 </template>
 
 <script>
 import About from "../components/sports/About";
 import Carousel from "../components/sports/Carousel";
+import Contact from "../components/sports/Contact";
 import Location from "../components/sports/Location";
 import Play from "../components/sports/Play";
 
@@ -28,6 +33,7 @@ export default {
   components: {
     About,
     Carousel,
+    Contact,
     Location,
     Play
   }
