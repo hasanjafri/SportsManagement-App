@@ -12,7 +12,7 @@
       <Play />
     </section>
 
-    <section class="px-5 py-5">
+    <section class="px-5 py-5 grey lighten-3">
       <Location />
     </section>
   </v-content>
