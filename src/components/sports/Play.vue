@@ -18,19 +18,19 @@
           and we provide rental racquets and coaching for our members.
         </p>
         <p
-          class="title text-xs-left font-weight-medium blue--text text--darken-4 pt-5 blockquote"
+          class="title text-xs-left font-weight-medium blue--text text--darken-4 pt-5 pb-1 blockquote"
         >
           If you are interested in joining the University of Toronto Varisty
           Blues Badminton team, please click <a>here</a>
         </p>
         <p
-          class="title text-xs-left font-weight-medium blue--text text--darken-4 pt-2 blockquote"
+          class="title text-xs-left font-weight-medium blue--text text--darken-4 pt-2 pb-1 blockquote"
         >
           If you are interested in booking courts for your own leisure play at
           the University of Toronto Athletic Centre, please click <a>here</a>
         </p>
         <p
-          class="title text-xs-left font-weight-medium blue--text text--darken-4 pt-2 blockquote"
+          class="title text-xs-left font-weight-medium blue--text text--darken-4 pt-2 pb-1 blockquote"
         >
           If you want to know the latest court arrangement, please checkout our
           online court hours information system.

@@ -31,23 +31,33 @@
           WhatsApp Group
         </h3>
         <p
-          class="headline text-xs-left font-weight-medium blue--text text--darken-4 pt-1 blockquote"
+          class="headline text-xs-left font-weight-medium blue--text text--darken-4 pt-1 pb-1 blockquote"
         >
           To get latest and instance update about game join our group
-          <v-icon
-            x-large
-            class="light-green--text text--darken-1"
+          <v-btn
+            icon
+            fab
+            flat
+            small
+            depressed
             href="https://chat.whatsapp.com/8w48a2c7o5oEJUTMu1fiMy"
-            @click
             target="_blank"
-            >mdi-whatsapp</v-icon
           >
+            <v-icon x-large class="light-green--text text--darken-1"
+              >mdi-whatsapp</v-icon
+            >
+          </v-btn>
         </p>
         <h3
           class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
         >
           Current Season
         </h3>
+        <ul class="text-xs-left headline blue--text text--darken-4 pb-5">
+          <li v-for="(current, i) in current_season" :key="i">
+            {{ current }}
+          </li>
+        </ul>
       </div>
     </v-flex>
   </v-layout>
@@ -79,6 +89,10 @@ export default {
       fees: [
         "One season fees (typically 10-11 sessions/day) is $45",
         "Pay as you go $7"
+      ],
+      current_season: [
+        "Current session has started on Jan, 1 2019 and will be held on every Wednesday after Namaza Maghrabain 7:30 pm to 9pm till Mid March 2019",
+        "Registration are open, we still have couple of spots available to join current session"
       ]
     };
   }
