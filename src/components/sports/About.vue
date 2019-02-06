@@ -31,20 +31,17 @@
           v-bind:style="{ float: 'left' }"
         ></v-img>
         <p
-          class="title inline text-xs-left blue-grey--text text--darken-3 font-weight-light py-3"
+          class="title inline text-xs-left blue-grey--text text--darken-3 font-weight-light py-3 blockquote"
         >
-          Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat
-          tincidunt ornare. Pellentesque habitant morbi tristique senectus et
-          netus et malesuada fames ac turpis egestas. Nullam in aliquet odio.
-          Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
-          Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat
-          tincidunt ornare. Pellentesque habitant morbi tristique senectus et
-          netus et malesuada fames ac turpis egestas. Nullam in aliquet odio.
-          Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
-          Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat
-          tincidunt ornare. Pellentesque habitant morbi tristique senectus et
-          netus et malesuada fames ac turpis egestas. Nullam in aliquet odio.
-          Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
+          The MIC (Masumeen Islamic Center) Badminton Club, we aim to create a
+          healthy, social and interactive environment for all community members
+          to share their love for badminton. We welcome all players of all skill
+          levels, from beginner to competitive. We offer weekly court hours to
+          play badminton, improve their skills and meet other players. Each
+          session (1 and half hour) hours is require pre-registration and few
+          spots available on a drop-in basis. There is tournaments and
+          intramurals with two/three categories, recreational, intermdiate and
+          advance. For those who wish to compete competitively.
         </p>
       </v-layout>
     </v-flex>
