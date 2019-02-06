@@ -10,21 +10,23 @@
         >
           Rules
         </h3>
-        <ul class="text-xs-left headline blue--text text--darken-4">
+        <ul class="text-xs-left headline blue--text text--darken-4 pb-4">
           <li v-for="(rule, i) in rules" :key="i">
             {{ rule }}
           </li>
         </ul>
+        <v-divider />
         <h3
           class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
         >
           Fees
         </h3>
-        <ul class="text-xs-left headline blue--text text--darken-4">
+        <ul class="text-xs-left headline blue--text text--darken-4 pb-4">
           <li v-for="(fee, i) in fees" :key="i">
             {{ fee }}
           </li>
         </ul>
+        <v-divider />
         <h3
           class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
         >
@@ -48,16 +50,18 @@
             >
           </v-btn>
         </p>
+        <v-divider class="pb-5" />
         <h3
-          class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
+          class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding pb-5"
         >
           Current Season
         </h3>
-        <ul class="text-xs-left headline blue--text text--darken-4 pb-5">
+        <ul class="text-xs-left headline blue--text text--darken-4 pb-4">
           <li v-for="(current, i) in current_season" :key="i">
             {{ current }}
           </li>
         </ul>
+        <v-divider class="pb-5" />
       </div>
     </v-flex>
   </v-layout>

@@ -21,6 +21,10 @@
     </section>
 
     <section class="px-5">
+      <UpcomingEvents />
+    </section>
+
+    <section class="px-5">
       <Contact />
     </section>
   </v-content>
@@ -33,6 +37,7 @@ import Contact from "../components/sports/Contact";
 import Join from "../components/sports/Join";
 import Location from "../components/sports/Location";
 import Play from "../components/sports/Play";
+import UpcomingEvents from "../components/sports/UpcomingEvents";
 
 export default {
   components: {
@@ -41,7 +46,8 @@ export default {
     Contact,
     Join,
     Location,
-    Play
+    Play,
+    UpcomingEvents
   }
 };
 </script>
