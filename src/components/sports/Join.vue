@@ -8,6 +8,12 @@
         <h3
           class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
         >
+          News & Announcements
+        </h3>
+        <v-divider />
+        <h3
+          class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
+        >
           Rules
         </h3>
         <ul class="text-xs-left headline blue--text text--darken-4 pb-4">
