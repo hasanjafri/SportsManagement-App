@@ -33,10 +33,14 @@ export default {
   data: function() {
     return {
       images: [
-        "https://dummyimage.com/800/ffffff/000000",
-        "https://dummyimage.com/1600/ffffff/000000",
-        "https://dummyimage.com/1280/000000/ffffff",
-        "https://dummyimage.com/400/000000/ffffff"
+        require("@/assets/img/b1.jpeg"),
+        require("@/assets/img/b2.jpeg"),
+        require("@/assets/img/b3.jpeg"),
+        require("@/assets/img/b4.jpeg"),
+        require("@/assets/img/b5.jpeg"),
+        require("@/assets/img/b6.jpeg"),
+        require("@/assets/img/b7.jpeg"),
+        require("@/assets/img/b8.jpeg")
       ],
       index: null,
       items: ["2016", "2017", "2018", "2019"],
