@@ -16,7 +16,9 @@
         >
           Rules
         </h3>
-        <ul class="text-xs-left headline blue--text text--darken-4 pb-4">
+        <ul
+          class="text-xs-left headline blue-grey--text text--darken-3 font-weight-light pb-4"
+        >
           <li v-for="(rule, i) in rules" :key="i">
             {{ rule }}
           </li>
@@ -27,7 +29,9 @@
         >
           Fees
         </h3>
-        <ul class="text-xs-left headline blue--text text--darken-4 pb-4">
+        <ul
+          class="text-xs-left headline blue-grey--text text--darken-3 font-weight-light pb-4"
+        >
           <li v-for="(fee, i) in fees" :key="i">
             {{ fee }}
           </li>
@@ -39,7 +43,7 @@
           WhatsApp Group
         </h3>
         <p
-          class="headline text-xs-left font-weight-medium blue--text text--darken-4 pt-1 pb-1 blockquote"
+          class="headline text-xs-left blue-grey--text text--darken-3 font-weight-light pt-1 pb-1 blockquote"
         >
           To get latest and instance update about game join our group
           <v-btn
@@ -62,7 +66,9 @@
         >
           Current Season
         </h3>
-        <ul class="text-xs-left headline blue--text text--darken-4 pb-4">
+        <ul
+          class="text-xs-left headline blue-grey--text text--darken-3 font-weight-light pb-4"
+        >
           <li v-for="(current, i) in current_season" :key="i">
             {{ current }}
           </li>
