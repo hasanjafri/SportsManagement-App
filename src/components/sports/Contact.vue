@@ -16,7 +16,7 @@
       <v-layout class="pt-3 px-5">
         <v-icon x-large class="green--text text---darken-5">fa-user</v-icon>
         <p
-          class="title inline text-xs-left blue-grey--text text--darken-3 font-weight-medium pt-3 px-3"
+          class="title inline text-xs-left blue-grey--text text--darken-3 font-weight-medium pt-3 pb-1 px-3 blockquote"
         >
           Safdar Abbas
         </p>
@@ -24,7 +24,7 @@
       <v-layout class="pt-3 px-5">
         <v-icon x-large class="green--text text---darken-5">fa-phone</v-icon>
         <p
-          class="title inline text-xs-left blue-grey--text text--darken-3 font-weight-medium pt-3 px-3"
+          class="title inline text-xs-left blue-grey--text text--darken-3 font-weight-medium pt-3 pb-1 px-3 blockquote"
         >
           (905) 459-0891
         </p>
@@ -32,7 +32,7 @@
       <v-layout class="pt-3 px-5" v-bind:style="{ width: '100%' }">
         <v-icon x-large class="green--text text---darken-5">fa-at</v-icon>
         <p
-          class="title inline text-xs-left blue-grey--text text--darken-3 font-weight-medium pt-3 px-3"
+          class="title inline text-xs-left blue-grey--text text--darken-3 font-weight-medium pt-3 pb-1 px-3 blockquote"
         >
           email@domain.com
         </p>

@@ -39,7 +39,9 @@
       ></v-toolbar-side-icon>
       <v-toolbar-title class="headline text-uppercase">
         <router-link to="/" class="black--text">MIC </router-link>
-        <router-link to="/about" class="black--text font-weight-light"
+        <router-link
+          to="/mens/badminton/photos"
+          class="black--text font-weight-light"
           >Sports Facilities</router-link
         >
       </v-toolbar-title>
