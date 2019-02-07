@@ -1,5 +1,15 @@
 <template>
   <div>
+    <v-flex xs12 sm6>
+      <v-select
+        v-model="value"
+        :items="items"
+        chips
+        label="FILTER BY YEAR"
+        multiple
+        outline
+      ></v-select>
+    </v-flex>
     <gallery :images="images" :index="index" @close="index = null"></gallery>
     <div
       class="image"
@@ -28,7 +38,9 @@ export default {
         "https://dummyimage.com/1280/000000/ffffff",
         "https://dummyimage.com/400/000000/ffffff"
       ],
-      index: null
+      index: null,
+      items: ["2016", "2017", "2018", "2019"],
+      value: ["2016", "2017", "2018", "2019"]
     };
   },
 
