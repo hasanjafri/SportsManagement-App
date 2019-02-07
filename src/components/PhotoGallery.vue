@@ -10,14 +10,18 @@
         outline
       ></v-select>
     </v-flex>
-    <gallery :images="images" :index="index" @close="index = null"></gallery>
+    <gallery
+      :images="images.map(img => img.src)"
+      :index="index"
+      @close="index = null"
+    ></gallery>
     <div
       class="image"
       v-for="(image, imageIndex) in images"
       :key="imageIndex"
       @click="index = imageIndex"
       :style="{
-        backgroundImage: 'url(' + image + ')',
+        backgroundImage: 'url(' + image.src + ')',
         width: '300px',
         height: '200px',
         cursor: 'pointer'
@@ -33,14 +37,14 @@ export default {
   data: function() {
     return {
       images: [
-        require("@/assets/img/b1.jpeg"),
-        require("@/assets/img/b2.jpeg"),
-        require("@/assets/img/b3.jpeg"),
-        require("@/assets/img/b4.jpeg"),
-        require("@/assets/img/b5.jpeg"),
-        require("@/assets/img/b6.jpeg"),
-        require("@/assets/img/b7.jpeg"),
-        require("@/assets/img/b8.jpeg")
+        { src: require("@/assets/img/b1.jpeg"), tag: "2016" },
+        { src: require("@/assets/img/b2.jpeg"), tag: "2016" },
+        { src: require("@/assets/img/b3.jpeg"), tag: "2017" },
+        { src: require("@/assets/img/b4.jpeg"), tag: "2017" },
+        { src: require("@/assets/img/b5.jpeg"), tag: "2018" },
+        { src: require("@/assets/img/b6.jpeg"), tag: "2018" },
+        { src: require("@/assets/img/b7.jpeg"), tag: "2019" },
+        { src: require("@/assets/img/b8.jpeg"), tag: "2019" }
       ],
       index: null,
       items: ["2016", "2017", "2018", "2019"],

@@ -20,13 +20,13 @@
       <Location />
     </section>
 
-    <section class="px-5">
+    <!-- <section class="px-5">
       <UpcomingEvents />
     </section>
 
     <section class="px-5 grey lighten-3">
       <OldEvents />
-    </section>
+    </section> -->
 
     <section class="px-5">
       <Contact />
