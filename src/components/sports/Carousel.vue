@@ -24,14 +24,15 @@
         >
           Registrations open for 2019-2020
         </div>
-        <!-- <v-btn
-                class="blue lighten-2 mt-5"
-                dark
-                large
-                href="/pre-made-themes"
-              >
-                Get Started
-              </v-btn> -->
+        <v-btn
+          class="subheading blue-grey darken-1 mt-5 text-uppercase font-weight-medium"
+          dark
+          large
+          outline
+          href="/register"
+        >
+          Register Now
+        </v-btn>
       </v-layout></v-carousel-item
     >
   </v-carousel>
