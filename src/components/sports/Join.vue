@@ -2,15 +2,6 @@
   <v-layout class="my-1" column align-start>
     <v-flex xs12 sm4 class="my-1">
       <div class="text-xs-center">
-        <h2 class="display-3 text-xs-left text-uppercase secPadding">
-          Join
-        </h2>
-        <h3
-          class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
-        >
-          News & Announcements
-        </h3>
-        <v-divider />
         <h3
           class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
         >
@@ -73,6 +64,36 @@
             {{ current }}
           </li>
         </ul>
+        <v-divider class="pb-5" />
+        <h3
+          class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
+        >
+          News & Announcements
+        </h3>
+        <v-divider class="pb-5" />
+        <h3
+          class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
+        >
+          Past Event Memories
+        </h3>
+        <p
+          class="headline text-xs-left blue-grey--text text--darken-3 font-weight-light pt-1 pb-1 blockquote"
+        >
+          To view photos & videos of our past events
+          <v-btn
+            icon
+            fab
+            flat
+            small
+            depressed
+            to="/mens/badminton/photos"
+            target="_blank"
+          >
+            <v-icon x-large class="light-green--text text--darken-1"
+              >fa-images</v-icon
+            >
+          </v-btn>
+        </p>
         <v-divider class="pb-5" />
       </div>
     </v-flex>
