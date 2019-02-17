@@ -47,7 +47,7 @@
       <v-toolbar-items v-if="windowWidth >= 1400">
         <v-menu v-for="(item, index) in dropDownItems" :key="index" offset-y>
           <v-btn class="black--text" flat slot="activator">
-            <v-icon class="pr-2">{{ item.iconName }}</v-icon>
+            <v-icon medium class="pr-2">{{ item.iconName }}</v-icon>
             {{ item.title }}
           </v-btn>
           <v-list v-if="item.items">
