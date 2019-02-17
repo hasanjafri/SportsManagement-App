@@ -89,7 +89,7 @@
     </section>
 
     <section>
-      <v-parallax :src="require('../assets/img/mix.jpeg')" height="380">
+      <v-img :src="require('../assets/img/mix.jpeg')" min-height="360">
         <!-- <v-layout column align-center justify-center>
           <div class="headline white--text mb-3 text-xs-center">
             Staying healthy has never been easier
@@ -99,7 +99,7 @@
             Get Started
           </v-btn>
         </v-layout> -->
-      </v-parallax>
+      </v-img>
     </section>
   </v-content>
 </template>

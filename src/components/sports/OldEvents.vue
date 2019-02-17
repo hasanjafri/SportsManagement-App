@@ -34,7 +34,7 @@
         </v-card-actions>
       </v-card>
     </v-flex>
-    <v-flex xs12 sm6 class="pb-5">
+    <v-flex xs12 sm6 class="pb-4">
       <v-card>
         <v-img
           src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"

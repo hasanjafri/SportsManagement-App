@@ -6,24 +6,32 @@
           Badminton at the Masumeen Islamic Center
         </h2>
         <h3
-          class="display-2 text-xs-left text-uppercase font-weight-light grey--text pt-2"
+          class="display-2 text-xs-left text-uppercase font-weight-light grey--text pt-2 pb-5"
         >
-          How do I play?
+          Current Season
         </h3>
-        <p class="headline text-xs-left font-weight-light pt-5 mt-5 blockquote">
-          Join UTBC! Our annual UTBC membership costs $30, and provides members
-          with exclusive acess to our weekly court hours, coaching, stringing
-          service, and priority access at badminton tournaments throughout the
-          year. We welcome badminton players of all skill levels to join UTBC,
-          and we provide rental racquets and coaching for our members.
-        </p>
-        <!-- <p
-          class="title text-xs-left blue-grey--text text--darken-3 font-weight-light pt-5 pb-1 blockquote"
+        <ul
+          class="text-xs-left headline blue-grey--text text--darken-3 font-weight-light pb-4"
         >
-          If you are interested in joining the University of Toronto Varisty
-          Blues Badminton team, please click <a>here</a>
-        </p> -->
+          <li v-for="(current, i) in current_season" :key="i">
+            {{ current }}
+          </li>
+        </ul>
+        <v-divider class="pb-4" />
       </div>
     </v-flex>
   </v-layout>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      current_season: [
+        "Current session has started on Jan, 1 2019 and will be held on every Wednesday after Namaza Maghrabain 7:30 pm to 9pm till Mid March 2019",
+        "Registration are open, we still have couple of spots available to join current session"
+      ]
+    };
+  }
+};
+</script>
