@@ -5,15 +5,8 @@
         <h3
           class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
         >
-          Rules
+          News & Announcements
         </h3>
-        <ul
-          class="text-xs-left headline blue-grey--text text--darken-3 font-weight-light pb-4"
-        >
-          <li v-for="(rule, i) in rules" :key="i">
-            {{ rule }}
-          </li>
-        </ul>
         <v-divider />
         <h3
           class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
@@ -51,6 +44,19 @@
             >
           </v-btn>
         </p>
+        <v-divider class="pb-4" />
+        <h3
+          class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
+        >
+          Rules
+        </h3>
+        <ul
+          class="text-xs-left headline blue-grey--text text--darken-3 font-weight-light pb-4"
+        >
+          <li v-for="(rule, i) in rules" :key="i">
+            {{ rule }}
+          </li>
+        </ul>
         <v-divider class="pb-4" />
       </div>
     </v-flex>
