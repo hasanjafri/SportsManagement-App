@@ -2,15 +2,6 @@
   <v-layout class="my-1" column align-start>
     <v-flex xs12 sm4 class="my-1">
       <div class="text-xs-center">
-        <h2 class="display-3 text-xs-left text-uppercase secPadding">
-          Join
-        </h2>
-        <h3
-          class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
-        >
-          News & Announcements
-        </h3>
-        <v-divider />
         <h3
           class="display-2 text-xs-left text-uppercase font-weight-light grey--text secPadding py-5"
         >
